@@ -1,4 +1,5 @@
 // components/Gallery.tsx
+import Link from 'next/link';
 import { Noto_Serif, Poppins } from 'next/font/google';
 
 const notoSerif = Noto_Serif({ subsets: ['latin'], weight: ['400', '700'] });
@@ -62,9 +63,12 @@ export default function Gallery() {
             <p className={`text-gray-600 text-[15px] md:text-[17px] max-w-4xl leading-relaxed ${poppins.className}`}>
               Setiap bingkai adalah cerita tentang semangat yang terus bertumbuh dan jejak nyata yang kami tinggalkan untuk sesama.
             </p>
-            <button className={`bg-[#a8f070] text-[#2a411b] font-bold text-[16px] md:text-[17px] px-8 py-3.5 rounded-xl shadow-lg hover:scale-105 transition-transform ${poppins.className}`}>
+            <Link
+              href="/gallery"
+              className={`inline-block bg-[#a8f070] text-[#2a411b] font-bold text-[16px] md:text-[17px] px-8 py-3.5 rounded-xl shadow-lg hover:scale-105 transition-transform ${poppins.className}`}
+            >
               Read More
-            </button>
+            </Link>
           </div>
 
         </div>
